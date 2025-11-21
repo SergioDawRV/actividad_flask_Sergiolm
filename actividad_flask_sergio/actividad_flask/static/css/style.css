@@ -1,0 +1,22 @@
+#stocky {
+   flex: 0; 
+   flex-shrink: 2;
+   max-width: 700px;
+   min-width: 500;
+   flex-wrap: wrap;
+
+   color:aliceblue ;margin: 7px; padding: 12px; background-color: rgb(91, 115, 211); border-radius: 4px;
+}
+
+h1 {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   background-color: rgb(93, 11, 170);
+   color: aqua;
+   max-width: 200px;
+}
+ h2 {
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   background-color: rgb(11, 170, 130);
+   color: rgb(0, 0, 0);
+   max-width: 500px;
+}

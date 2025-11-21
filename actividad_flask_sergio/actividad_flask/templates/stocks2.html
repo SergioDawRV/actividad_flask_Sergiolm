@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block titulo %}Inicio{% endblock %}
+
+{% block contenido %}
+<p style="color: gray;">índice > acciones > {{stock.lower()}}</p>
+<a href="{{ url_for('stocks.ir_stocks')}}">volver a stocks</a>
+<!-- <p>Esta página utiliza herencia de plantillas.</p> -->
+
+<div id='stocky' >
+    <h3>{{stock}}</h3>
+    <p>Precio: {{stocks_info2['price']}} - Capitalización de Mercado: {{stocks_info2['market_cap']}} -  Sector: {{stocks_info2['sector']}}</p>
+    <p>{{live}}</p>
+</div>
+<img style="padding-left: 5px; width: 300px; height: 100ppx; border-radius: 7px;" src="{{ url_for('static', filename='img/stock.jpg')}}">
+
+<!-- <p>{{live}}</p> -->
+
+
+{% endblock %}

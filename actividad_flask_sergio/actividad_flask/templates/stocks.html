@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo %}Inicio{% endblock %}
+
+{% block contenido %}
+<!-- <h2>Página de stocks</h2> -->
+<p style="color: gray;" >índice > acciones</p>
+<a href="{{ url_for('index')}}">volver a stocks</a>
+<h2>Bienvenido al apartado de Stock  financieros</h2>
+<img style="width: 300px; height: 100ppx; border-radius: 7px;"; src="{{ url_for('static', filename='img/nasqad.png')}}">
+<p>Valuaciones actuales:</p>
+<ul>
+
+    {% for stock,precio in stocks.items() %}
+        <!-- <li>{{stock}} - {{precio}}</li> -->
+        <li><a href="{{ url_for('stocks.obtener_stock', id=stock )}}">{{stock}}:</a> {{precio}}€</li>
+    {% endfor%}
+</ul>
+
+
+{% endblock %}
